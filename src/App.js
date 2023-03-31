@@ -10,8 +10,8 @@ import { Tamil } from "./Tamil";
 import { History } from "./History";
 import { Biography } from "./Biography";
 import { SciFi } from "./SciFi";
-import { Geography } from "./Geography";
 import { Economics } from "./Economics";
+import { TamilStoryBooks } from "./TamilStoryBooks";
 
 function App() {
   const navigate = useNavigate();
@@ -36,7 +36,7 @@ function App() {
         <Route path="/library/history" element={<History />} />
         <Route path="/library/biography" element={<Biography />} />
         <Route path="/library/sci-fi" element={<SciFi />} />
-        <Route path="/library/geography" element={<Geography />} />
+        <Route path="/library/tamilstorybooks" element={<TamilStoryBooks />} />
         <Route path="/library/economics" element={<Economics />} />
       </Routes>
     </div>

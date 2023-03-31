@@ -39,17 +39,17 @@ export function Biography() {
         <h1>Hello all welcome to the bio section</h1>
       </div>
       <div className="master-card">
-        {biographyBook.map((tamil, index) => (
+        {biographyBook.map((bio, index) => (
           <div key={index} className="card">
-            <img className="image" src={tamil.image} alt={tamil.book} />
+            <img className="image" src={bio.image} alt={bio.book} />
             <div className="book-details">
               <p>
                 <strong>Book :</strong>
-                {tamil.book}
+                {bio.book}
               </p>
               <p>
                 <strong>Author :</strong>
-                {tamil.author}
+                {bio.author}
               </p>
             </div>
             <div className="material-btns">
