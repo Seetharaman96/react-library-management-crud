@@ -4,34 +4,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useNavigate } from "react-router-dom";
 
-export function Tamil() {
-  const tamilBook = [
-    {
-      image:
-        "https://kbimages1-a.akamaihd.net/af51647e-1896-4dcf-b130-6329aab5f35a/1200/1200/False/thirukkural.jpg",
-      book: "Thirukkural",
-      author: "Thiruvalluvar",
-    },
-    {
-      image:
-        "https://s3.ap-south-1.amazonaws.com/storage.commonfolks.in/docs/products/images_full/silappathikaaram_FrontImage_785.jpg",
-      book: "Cilappatikaram",
-      author: "Ilango Adigal",
-    },
-    {
-      image:
-        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1595720133l/40339844.jpg",
-      book: "Cīvaka Cintāmaṇi",
-      author: "Tirutakkatevar",
-    },
-    {
-      image:
-        "https://routemybook.com/uploads/productImage/product1535562684.jpg",
-      book: "Manimekalai",
-      author: "Chithalai Chathanar",
-    },
-  ];
-
+export function Tamil({ tamil, setTamil }) {
   const navigate = useNavigate();
   return (
     <div>
@@ -39,7 +12,7 @@ export function Tamil() {
         <h1>Hello all welcome to the tamil section</h1>
       </div>
       <div className="master-card">
-        {tamilBook.map((tamil, index) => (
+        {tamil.map((tamil, index) => (
           <div key={index} className="card">
             <img className="image" src={tamil.image} alt={tamil.book} />
             <div className="book-details">
@@ -56,7 +29,7 @@ export function Tamil() {
               <IconButton
                 variant="outlined"
                 color="primary"
-                onClick={() => navigate("/tamilbooks/details")}
+                onClick={() => navigate(`/library/tamil/bookdetails/${index}`)}
               >
                 <InfoIcon></InfoIcon>
               </IconButton>

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 export function Library() {
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="bg-image">
       <div className="title">
         <h1>Hello all welcome to the library section</h1>
       </div>

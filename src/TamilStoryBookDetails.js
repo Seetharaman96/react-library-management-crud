@@ -1,40 +1,40 @@
 import { Button } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 
-export function TamilBooksDetails({ tamil, setTamil }) {
+export function TamilStoryBookDetails({ tamilStory, setTamilStory }) {
   const navigate = useNavigate();
   const { id } = useParams();
-  const tamilDetail = tamil[id];
+  const tamilStoryDetail = tamilStory[id];
   return (
     <div>
       <div className="title">
         <h3>
-          Hello all welcome to the tamil book details page {tamilDetail.book}
+          Hello all welcome to the tamil book details page {tamilStoryDetail.book}
         </h3>
       </div>
       <div className="master-card">
         <div className="card-details">
           <img
             className="image-details"
-            src={tamilDetail.image}
-            alt={tamilDetail.book}
+            src={tamilStoryDetail.image}
+            alt={tamilStoryDetail.book}
           />
           <div className="book-details-view">
             <p>
               <strong>Book :</strong>
-              {tamilDetail.book}
+              {tamilStoryDetail.book}
             </p>
             <p>
               <strong>Author :</strong>
-              {tamilDetail.author}
+              {tamilStoryDetail.author}
             </p>
             <p>
               <strong>Year of release :</strong>
-              {tamilDetail.releaseyear}
+              {tamilStoryDetail.releaseyear}
             </p>
             <p>
               <strong>Description :</strong>
-              {tamilDetail.description}
+              {tamilStoryDetail.description}
             </p>
           </div>
         </div>
