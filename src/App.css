@@ -55,8 +55,8 @@
 }
 .book-details{
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
 }
 .book-details-view{
   display: flex;
@@ -75,4 +75,11 @@
 }
 .bg-image{
   background-image: linear-gradient(to top, rgba(0,0,0, 0.6)50%,rgba(0,0,0,0.6)50%),url(https://images.unsplash.com/photo-1476275466078-4007374efbbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG9wZW4lMjBib29rfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+}
+.add-form{
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 1rem;
+  margin: 0 auto;
 }

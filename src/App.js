@@ -27,6 +27,8 @@ import { BiographyBookDetails } from "./BiographyBookDetails";
 import { ScienceFictionBookDetails } from "./ScienceFictionBookDetails";
 import { TamilStoryBookDetails } from "./TamilStoryBookDetails";
 import { EconomicsBookDetails } from "./EconomicsBookDetails";
+import { AddTamilBook } from "./AddTamilBook";
+import { Login } from "./fromik";
 
 function App() {
   const [tamil, setTamil] = useState(tamilBook);
@@ -61,6 +63,7 @@ function App() {
           path="/library/tamil/bookdetails/:id"
           element={<TamilBooksDetails tamil={tamil} setTamil={setTamil} />}
         />
+        <Route path="/library/tamil/addbook" element={<AddTamilBook tamil={tamil} setTamil={setTamil} />} />
         <Route
           path="/library/history"
           element={<History history={history} setHistory={setHistory} />}
@@ -122,6 +125,7 @@ function App() {
             />
           }
         />
+        <Route path="/login" element={<Login/>} />
       </Routes>
     </div>
   );

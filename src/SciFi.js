@@ -5,6 +5,10 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { useNavigate } from "react-router-dom";
 
 export function SciFi({ sciFi, setSciFi}) {
+  const deleteBook = (id) => {
+    const alterList = sciFi.filter((del) => del.id !== id);
+    setSciFi(alterList);
+  }
   const navigate = useNavigate();
   return (
     <div>
@@ -36,7 +40,7 @@ export function SciFi({ sciFi, setSciFi}) {
               <IconButton variant="outlined" color="success">
                 <EditIcon></EditIcon>
               </IconButton>
-              <IconButton variant="outlined" color="error">
+              <IconButton variant="outlined" color="error" onClick={()=>deleteBook(sci.id)}>
                 <DeleteIcon></DeleteIcon>
               </IconButton>
             </div>

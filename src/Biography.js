@@ -5,6 +5,10 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { useNavigate } from "react-router-dom";
 
 export function Biography({ bio, setBio }) {
+  const deleteBook = (id) => {
+    const alterList = bio.filter((del) => del.id !== id);
+    setBio(alterList);
+  }
   const navigate = useNavigate();
   return (
     <div>
@@ -36,7 +40,7 @@ export function Biography({ bio, setBio }) {
               <IconButton variant="outlined" color="success">
                 <EditIcon></EditIcon>
               </IconButton>
-              <IconButton variant="outlined" color="error">
+              <IconButton variant="outlined" color="error" onClick={()=>deleteBook(bio.id)}>
                 <DeleteIcon></DeleteIcon>
               </IconButton>
             </div>

@@ -5,6 +5,10 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { useNavigate } from "react-router-dom";
 
 export function History({ history, setHistory }) {
+  const deleteBook = (id) => {
+    const alterList = history.filter((del)=>del.id !== id);
+    setHistory(alterList)
+  }
   const navigate = useNavigate();
   return (
     <div>
@@ -36,7 +40,7 @@ export function History({ history, setHistory }) {
               <IconButton variant="outlined" color="success">
                 <EditIcon></EditIcon>
               </IconButton>
-              <IconButton variant="outlined" color="error">
+              <IconButton variant="outlined" color="error" onClick={()=>deleteBook(hist.id)}>
                 <DeleteIcon></DeleteIcon>
               </IconButton>
             </div>

@@ -5,6 +5,10 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { useNavigate } from "react-router-dom";
 
 export function TamilStoryBooks({ tamilStory, setTamilStory }) {
+  const deleteBook = (id) => {
+    const alterList = tamilStory.filter((del) => del.id !== id);
+    setTamilStory(alterList);
+  }
   const navigate = useNavigate();
   return (
     <div>
@@ -36,7 +40,7 @@ export function TamilStoryBooks({ tamilStory, setTamilStory }) {
               <IconButton variant="outlined" color="success">
                 <EditIcon></EditIcon>
               </IconButton>
-              <IconButton variant="outlined" color="error">
+              <IconButton variant="outlined" color="error" onClick={()=>deleteBook(tamil.id)}>
                 <DeleteIcon></DeleteIcon>
               </IconButton>
             </div>

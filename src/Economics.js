@@ -5,6 +5,10 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { useNavigate } from "react-router-dom";
 
 export function Economics({ economics, setEconomics }) {
+  const deleteBook = (id) => {
+    const alterList = economics.filter((del) => del.id !== id);
+    setEconomics(alterList);
+  }
   const navigate = useNavigate();
   return (
     <div>
@@ -36,7 +40,7 @@ export function Economics({ economics, setEconomics }) {
               <IconButton variant="outlined" color="success">
                 <EditIcon></EditIcon>
               </IconButton>
-              <IconButton variant="outlined" color="error">
+              <IconButton variant="outlined" color="error" onClick={()=>deleteBook(eco.id)}>
                 <DeleteIcon></DeleteIcon>
               </IconButton>
             </div>
