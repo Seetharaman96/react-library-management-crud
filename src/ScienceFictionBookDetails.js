@@ -9,7 +9,7 @@ export function ScienceFictionBookDetails({ sciFi, setSciFi}) {
     <div>
       <div className="title">
         <h3>
-          Hello all welcome to the tamil book details page {sciFiDetail.book}
+          Hello all welcome to the scienceFictionBook book details page {sciFiDetail.book}
         </h3>
       </div>
       <div className="master-card">

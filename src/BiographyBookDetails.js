@@ -9,7 +9,7 @@ export function BiographyBookDetails({ bio, setBio }) {
     <div>
       <div className="title">
         <h3>
-          Hello all welcome to the tamil book details page {bioDetail.book}
+          Hello all welcome to the biography book details page {bioDetail.book}
         </h3>
       </div>
       <div className="master-card">

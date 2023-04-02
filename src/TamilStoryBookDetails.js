@@ -9,7 +9,7 @@ export function TamilStoryBookDetails({ tamilStory, setTamilStory }) {
     <div>
       <div className="title">
         <h3>
-          Hello all welcome to the tamil book details page {tamilStoryDetail.book}
+          Hello all welcome to the tamil story book details page {tamilStoryDetail.book}
         </h3>
       </div>
       <div className="master-card">

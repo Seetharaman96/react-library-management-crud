@@ -48,10 +48,10 @@ function App() {
         <AppBar position="static">
           <Toolbar>
             <Button color="inherit" onClick={() => navigate("/")}>
-              Home
+              Library
             </Button>
             <Button color="inherit" onClick={() => navigate("/library")}>
-              Library
+              Book Genre
             </Button>
           </Toolbar>
         </AppBar>

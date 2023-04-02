@@ -9,7 +9,7 @@ const formValidationSchema = yup.object({
   book: yup.string().required().min(1).max(20),
   author: yup.string().required().min(3).max(20),
   image: yup.string().url().required().min(5),
-  releaseYear: yup.string().required().min(1).max(10),
+  releaseyear: yup.string().required().min(1).max(10),
   description: yup.string().required().min(10),
 });
 
@@ -22,7 +22,7 @@ export function AddBioBook({ bio, setBio }) {
         book: "",
         author: "",
         image: "",
-        releaseYear: "",
+        releaseyear: "",
         description: "",
       },
       validationSchema: formValidationSchema,
@@ -90,14 +90,14 @@ export function AddBioBook({ bio, setBio }) {
           id="outlined-basic"
           label="Year of Release"
           variant="outlined"
-          name="releaseYear"
+          name="releaseyear"
           onChange={handleChange}
           onBlur={handleBlur}
-          value={values.releaseYear}
-          error={touched.releaseYear && errors.releaseYear}
+          value={values.releaseyear}
+          error={touched.releaseyear && errors.releaseyear}
           helperText={
-            touched.releaseYear && errors.releaseYear
-              ? errors.releaseYear
+            touched.releaseyear && errors.releaseyear
+              ? errors.releaseyear
               : null
           }
         />

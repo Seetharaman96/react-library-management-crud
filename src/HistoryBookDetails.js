@@ -9,7 +9,7 @@ export function HistoryBookDetails({ history, setHistory }) {
     <div>
       <div className="title">
         <h3>
-          Hello all welcome to the tamil book details page {historyDetail.book}
+          Hello all welcome to the history book details page {historyDetail.book}
         </h3>
       </div>
       <div className="master-card">

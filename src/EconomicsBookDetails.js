@@ -9,7 +9,7 @@ export function EconomicsBookDetails({ economics, setEconomics }) {
     <div>
       <div className="title">
         <h3>
-          Hello all welcome to the tamil book details page {economicsDetail.book}
+          Hello all welcome to the economics book details page {economicsDetail.book}
         </h3>
       </div>
       <div className="master-card">
