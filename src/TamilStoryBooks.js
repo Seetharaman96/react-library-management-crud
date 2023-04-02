@@ -8,7 +8,7 @@ export function TamilStoryBooks({ tamilStory, setTamilStory }) {
   const deleteBook = (id) => {
     const alterList = tamilStory.filter((del) => del.id !== id);
     setTamilStory(alterList);
-  }
+  };
   const navigate = useNavigate();
   return (
     <div>
@@ -33,14 +33,20 @@ export function TamilStoryBooks({ tamilStory, setTamilStory }) {
               <IconButton
                 variant="outlined"
                 color="primary"
-                onClick={() => navigate(`/library/tamilstorybooks/details/${index}`)}
+                onClick={() =>
+                  navigate(`/library/tamilstorybooks/details/${index}`)
+                }
               >
                 <InfoIcon></InfoIcon>
               </IconButton>
               <IconButton variant="outlined" color="success">
                 <EditIcon></EditIcon>
               </IconButton>
-              <IconButton variant="outlined" color="error" onClick={()=>deleteBook(tamil.id)}>
+              <IconButton
+                variant="outlined"
+                color="error"
+                onClick={() => deleteBook(tamil.id)}
+              >
                 <DeleteIcon></DeleteIcon>
               </IconButton>
             </div>
@@ -48,7 +54,11 @@ export function TamilStoryBooks({ tamilStory, setTamilStory }) {
         ))}
       </div>
       <div className="add-btn">
-        <Button variant="contained" color="primary">
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => navigate("/library/tamilstorybooks/addbook")}
+        >
           Add New Book
         </Button>
       </div>

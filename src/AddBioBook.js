@@ -13,7 +13,7 @@ const formValidationSchema = yup.object({
   description: yup.string().required().min(10),
 });
 
-export function AddTamilBook({ tamil, setTamil }) {
+export function AddBioBook({ bio, setBio }) {
   const navigate = useNavigate();
   const { handleSubmit, handleBlur, handleChange, values, touched, errors } =
     useFormik({
@@ -33,13 +33,13 @@ export function AddTamilBook({ tamil, setTamil }) {
     });
 
   const addMovie = async (values) => {
-    await setTamil([...tamil, values]);
-    navigate("/library/tamil");
+    await setBio([...bio, values]);
+    navigate("/library/biography");
   };
   return (
     <div>
       <div className="title">
-        <h3>Hello all welcome to the add tamil book page</h3>
+        <h3>Hello all welcome to the add biography book page</h3>
       </div>
       <form onSubmit={handleSubmit} className="add-form">
         <TextField

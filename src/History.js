@@ -48,7 +48,7 @@ export function History({ history, setHistory }) {
         ))}
       </div>
       <div className="add-btn">
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={()=>navigate("/library/history/addbook")}>
           Add New Book
         </Button>
       </div>

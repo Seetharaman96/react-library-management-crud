@@ -48,7 +48,7 @@ export function SciFi({ sciFi, setSciFi}) {
         ))}
       </div>
       <div className="add-btn">
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={()=>navigate("/library/sci-fi/addbook")}>
           Add New Book
         </Button>
       </div>

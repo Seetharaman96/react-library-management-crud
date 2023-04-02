@@ -28,7 +28,11 @@ import { ScienceFictionBookDetails } from "./ScienceFictionBookDetails";
 import { TamilStoryBookDetails } from "./TamilStoryBookDetails";
 import { EconomicsBookDetails } from "./EconomicsBookDetails";
 import { AddTamilBook } from "./AddTamilBook";
-import { Login } from "./fromik";
+import { AddHistoryBook } from "./AddHistoryBook";
+import { AddBioBook } from "./AddBioBook";
+import { AddSciFiBook } from "./AddSciFiBook";
+import { AddTamilStoryBook } from "./AddTamilStoryBook";
+import { AddEconomicsBook } from "./AddEconomicsBook";
 
 function App() {
   const [tamil, setTamil] = useState(tamilBook);
@@ -63,7 +67,10 @@ function App() {
           path="/library/tamil/bookdetails/:id"
           element={<TamilBooksDetails tamil={tamil} setTamil={setTamil} />}
         />
-        <Route path="/library/tamil/addbook" element={<AddTamilBook tamil={tamil} setTamil={setTamil} />} />
+        <Route
+          path="/library/tamil/addbook"
+          element={<AddTamilBook tamil={tamil} setTamil={setTamil} />}
+        />
         <Route
           path="/library/history"
           element={<History history={history} setHistory={setHistory} />}
@@ -75,12 +82,20 @@ function App() {
           }
         />
         <Route
+          path="/library/history/addbook"
+          element={<AddHistoryBook history={history} setHistory={setHistory} />}
+        />
+        <Route
           path="/library/biography"
           element={<Biography bio={bio} setBio={setBio} />}
         />
         <Route
           path="/library/biography/bookdetails/:id"
           element={<BiographyBookDetails bio={bio} setBio={setBio} />}
+        />
+        <Route
+          path="/library/biography/addbook"
+          element={<AddBioBook bio={bio} setBio={setBio} />}
         />
         <Route
           path="/library/sci-fi"
@@ -91,6 +106,10 @@ function App() {
           element={
             <ScienceFictionBookDetails sciFi={sciFi} setSciFi={setSciFi} />
           }
+        />
+        <Route
+          path="/library/sci-fi/addbook"
+          element={<AddSciFiBook sciFi={sciFi} setSciFi={setSciFi} />}
         />
         <Route
           path="/library/tamilstorybooks"
@@ -111,6 +130,15 @@ function App() {
           }
         />
         <Route
+          path="/library/tamilstorybooks/addbook"
+          element={
+            <AddTamilStoryBook
+              tamilStory={tamilStory}
+              setTamilStory={setTamilStory}
+            />
+          }
+        />
+        <Route
           path="/library/economics"
           element={
             <Economics economics={economics} setEconomics={setEconomics} />
@@ -125,7 +153,15 @@ function App() {
             />
           }
         />
-        <Route path="/login" element={<Login/>} />
+        <Route
+          path="/library/economics/addbook"
+          element={
+            <AddEconomicsBook
+              economics={economics}
+              setEconomics={setEconomics}
+            />
+          }
+        />
       </Routes>
     </div>
   );

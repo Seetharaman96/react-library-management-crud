@@ -8,7 +8,7 @@ export function Economics({ economics, setEconomics }) {
   const deleteBook = (id) => {
     const alterList = economics.filter((del) => del.id !== id);
     setEconomics(alterList);
-  }
+  };
   const navigate = useNavigate();
   return (
     <div>
@@ -40,7 +40,11 @@ export function Economics({ economics, setEconomics }) {
               <IconButton variant="outlined" color="success">
                 <EditIcon></EditIcon>
               </IconButton>
-              <IconButton variant="outlined" color="error" onClick={()=>deleteBook(eco.id)}>
+              <IconButton
+                variant="outlined"
+                color="error"
+                onClick={() => deleteBook(eco.id)}
+              >
                 <DeleteIcon></DeleteIcon>
               </IconButton>
             </div>
@@ -48,7 +52,11 @@ export function Economics({ economics, setEconomics }) {
         ))}
       </div>
       <div className="add-btn">
-        <Button variant="contained" color="primary">
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => navigate("/library/economics/addbook")}
+        >
           Add New Book
         </Button>
       </div>

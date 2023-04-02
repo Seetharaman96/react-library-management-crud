@@ -48,7 +48,7 @@ export function Biography({ bio, setBio }) {
         ))}
       </div>
       <div className="add-btn">
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={()=>navigate("/library/biography/addbook")}>
           Add New Book
         </Button>
       </div>
