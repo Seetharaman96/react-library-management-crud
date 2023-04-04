@@ -5,11 +5,11 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 
 const formValidationSchema = yup.object({
-  id: yup.string().required().min(1),
-  book: yup.string().required().min(1).max(20),
-  author: yup.string().required().min(3).max(20),
-  image: yup.string().url().required().min(5),
-  releaseyear: yup.string().required().min(1).max(10),
+  id: yup.string().required(),
+  book: yup.string().required(),
+  author: yup.string().required(),
+  image: yup.string().url().required(),
+  releaseyear: yup.string().required(),
   description: yup.string().required().min(10),
 });
 

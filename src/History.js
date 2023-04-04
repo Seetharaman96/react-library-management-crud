@@ -37,7 +37,7 @@ export function History({ history, setHistory }) {
               >
                 <InfoIcon></InfoIcon>
               </IconButton>
-              <IconButton variant="outlined" color="success">
+              <IconButton variant="outlined" color="success" onClick={()=>navigate(`/library/history/editbook/${hist.id}`)}>
                 <EditIcon></EditIcon>
               </IconButton>
               <IconButton variant="outlined" color="error" onClick={()=>deleteBook(hist.id)}>
@@ -50,6 +50,9 @@ export function History({ history, setHistory }) {
       <div className="add-btn">
         <Button variant="contained" color="primary" onClick={()=>navigate("/library/history/addbook")}>
           Add New Book
+        </Button>
+        <Button variant="contained" color="error" onClick={()=>navigate("/library")}>
+          Back
         </Button>
       </div>
     </div>

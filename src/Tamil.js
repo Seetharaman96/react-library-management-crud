@@ -37,7 +37,7 @@ export function Tamil({ tamil, setTamil }) {
               >
                 <InfoIcon></InfoIcon>
               </IconButton>
-              <IconButton variant="outlined" color="success">
+              <IconButton variant="outlined" color="success" onClick={()=>navigate(`/library/tamil/editbook/${tamil.id}`)}>
                 <EditIcon></EditIcon>
               </IconButton>
               <IconButton variant="outlined" color="error" onClick={()=>deleteBook(tamil.id)}>
@@ -50,6 +50,9 @@ export function Tamil({ tamil, setTamil }) {
       <div className="add-btn">
         <Button variant="contained" color="primary" onClick={()=>navigate("/library/tamil/addbook")}>
           Add New Book
+        </Button>
+        <Button variant="contained" color="error" onClick={()=>navigate("/library")}>
+          Back
         </Button>
       </div>
     </div>

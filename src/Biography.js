@@ -8,7 +8,7 @@ export function Biography({ bio, setBio }) {
   const deleteBook = (id) => {
     const alterList = bio.filter((del) => del.id !== id);
     setBio(alterList);
-  }
+  };
   const navigate = useNavigate();
   return (
     <div>
@@ -33,14 +33,26 @@ export function Biography({ bio, setBio }) {
               <IconButton
                 variant="outlined"
                 color="primary"
-                onClick={() => navigate(`/library/biography/bookdetails/${index}`)}
+                onClick={() =>
+                  navigate(`/library/biography/bookdetails/${index}`)
+                }
               >
                 <InfoIcon></InfoIcon>
               </IconButton>
-              <IconButton variant="outlined" color="success">
+              <IconButton
+                variant="outlined"
+                color="success"
+                onClick={() =>
+                  navigate(`/library/biography/editbook/${bio.id}`)
+                }
+              >
                 <EditIcon></EditIcon>
               </IconButton>
-              <IconButton variant="outlined" color="error" onClick={()=>deleteBook(bio.id)}>
+              <IconButton
+                variant="outlined"
+                color="error"
+                onClick={() => deleteBook(bio.id)}
+              >
                 <DeleteIcon></DeleteIcon>
               </IconButton>
             </div>
@@ -48,8 +60,15 @@ export function Biography({ bio, setBio }) {
         ))}
       </div>
       <div className="add-btn">
-        <Button variant="contained" color="primary" onClick={()=>navigate("/library/biography/addbook")}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => navigate("/library/biography/addbook")}
+        >
           Add New Book
+        </Button>
+        <Button variant="contained" color="error" onClick={()=>navigate("/library")}>
+          Back
         </Button>
       </div>
     </div>

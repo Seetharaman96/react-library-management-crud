@@ -39,7 +39,13 @@ export function TamilStoryBooks({ tamilStory, setTamilStory }) {
               >
                 <InfoIcon></InfoIcon>
               </IconButton>
-              <IconButton variant="outlined" color="success">
+              <IconButton
+                variant="outlined"
+                color="success"
+                onClick={() =>
+                  navigate(`/library/tamilstorybooks/editbook/${tamil.id}`)
+                }
+              >
                 <EditIcon></EditIcon>
               </IconButton>
               <IconButton
@@ -60,6 +66,9 @@ export function TamilStoryBooks({ tamilStory, setTamilStory }) {
           onClick={() => navigate("/library/tamilstorybooks/addbook")}
         >
           Add New Book
+        </Button>
+        <Button variant="contained" color="error" onClick={()=>navigate("/library")}>
+          Back
         </Button>
       </div>
     </div>

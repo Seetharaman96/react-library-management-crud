@@ -37,7 +37,13 @@ export function Economics({ economics, setEconomics }) {
               >
                 <InfoIcon></InfoIcon>
               </IconButton>
-              <IconButton variant="outlined" color="success">
+              <IconButton
+                variant="outlined"
+                color="success"
+                onClick={() =>
+                  navigate(`/library/economics/editbook/${eco.id}`)
+                }
+              >
                 <EditIcon></EditIcon>
               </IconButton>
               <IconButton
@@ -58,6 +64,9 @@ export function Economics({ economics, setEconomics }) {
           onClick={() => navigate("/library/economics/addbook")}
         >
           Add New Book
+        </Button>
+        <Button variant="contained" color="error" onClick={()=>navigate("/library")}>
+          Back
         </Button>
       </div>
     </div>
