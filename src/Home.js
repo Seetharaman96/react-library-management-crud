@@ -12,8 +12,8 @@ export function Home() {
             provides physical (hard copies) or digital access (soft copies)
             materials, and may be a physical location or a virtual space, or
             both. A library's collection can include printed materials and other
-            physical resources in many formats such as DVD, CD and cassette as
-            well as access to information, music or other content held on
+            physical resources in many formats such as DVD, CD and cassette and
+            well access to information, music or other content held on
             bibliographic databases.
             <br />A library, which may vary widely in size, may be organized for
             use and maintained by a public body such as a government; an
