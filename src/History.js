@@ -13,7 +13,7 @@ export function History({ history, setHistory }) {
   return (
     <div>
       <div className="title">
-        <h1>Hello all welcome to the history book section</h1>
+        <h2>Hello all welcome to the history book section</h2>
       </div>
       <div className="master-card">
         {history.map((hist, index) => (

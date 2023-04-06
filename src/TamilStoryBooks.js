@@ -13,7 +13,7 @@ export function TamilStoryBooks({ tamilStory, setTamilStory }) {
   return (
     <div>
       <div className="title">
-        <h1>Hello all welcome to the tamil story book section</h1>
+        <h2>Hello all welcome to the tamil story book section</h2>
       </div>
       <div className="master-card">
         {tamilStory.map((tamil, index) => (

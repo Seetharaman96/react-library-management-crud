@@ -13,7 +13,7 @@ export function Biography({ bio, setBio }) {
   return (
     <div>
       <div className="title">
-        <h1>Hello all welcome to the bio section</h1>
+        <h2>Hello all welcome to the bio section</h2>
       </div>
       <div className="master-card">
         {bio.map((bio, index) => (

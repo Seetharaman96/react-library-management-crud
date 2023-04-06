@@ -4,8 +4,8 @@ export function Library() {
   const navigate = useNavigate();
   return (
     <div className="bg-image">
-      <div className="title">
-        <h1>Hello all welcome to the library section</h1>
+      <div className="main-title">
+        <h2>Hello all welcome to the library section</h2>
       </div>
       <div className="library-btns">
         <button className="btn" onClick={() => navigate("/library/tamil")}>

@@ -13,7 +13,7 @@ export function Economics({ economics, setEconomics }) {
   return (
     <div>
       <div className="title">
-        <h1>Hello all welcome to the economics book section</h1>
+        <h2>Hello all welcome to the economics book section</h2>
       </div>
       <div className="master-card">
         {economics.map((eco, index) => (

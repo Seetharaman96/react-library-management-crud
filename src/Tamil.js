@@ -13,7 +13,7 @@ export function Tamil({ tamil, setTamil }) {
   return (
     <div>
       <div className="title">
-        <h1>Hello all welcome to the tamil section</h1>
+        <h2>Hello all welcome to the tamil section</h2>
       </div>
       <div className="master-card">
         {tamil.map((tamil, index) => (

@@ -13,7 +13,7 @@ export function SciFi({ sciFi, setSciFi }) {
   return (
     <div>
       <div className="title">
-        <h1>Hello all welcome to the science fiction book section</h1>
+        <h2>Hello all welcome to the science fiction book section</h2>
       </div>
       <div className="master-card">
         {sciFi.map((sci, index) => (
